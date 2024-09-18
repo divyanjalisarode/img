@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Image Addition</title>
+</head>
+<body>
+    <h1>Dynamic Image Addition Example</h1>
+    <div id="image-container">
+        <!-- Image will be added here -->
+    </div>
+    <button id="add-image-button">Add Image</button>
+
+    <script>
+        // JavaScript code to add image dynamically
+        document.getElementById('add-image-button').addEventListener('click', function() {
+            // Create a new image element
+            var img = document.createElement('img');
+            
+            // Set the src attribute to the URL of the image
+            img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/220px-Virat_Kohli_in_PMO_New_Delhi.jpg'; // Use any image URL here
+            
+            // Set alternative text for the image
+            img.alt = 'Placeholder Image';
+            
+            // Optionally, set other attributes or styles
+            img.style.border = '2px solid black'; // Example style
+            
+            // Get the container where the image will be added
+            var container = document.getElementById('image-container');
+            
+            // Append the image element to the container
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
